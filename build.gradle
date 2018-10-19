@@ -4,6 +4,21 @@ apply plugin: "application"
 
 mainClassName = "com.example.Main"
 
+sourceSets {
+    // Note that just declaring this sourceset creates two configurations.
+    intTest {
+        java {
+            compileClasspath += main.output
+            runtimeClasspath += main.output
+        }
+    }
+}
+
+configurations {
+    intTestCompile.extendsFrom testCompile
+    intTestRuntime.extendsFrom testRuntime
+}
+
 sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
