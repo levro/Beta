@@ -10,7 +10,11 @@ public class Main {
     final static Logger log = LogManager.getLogger( Main.class);
     public static void main(String[] args) {
         log.debug( "main start");
-        log.info("VERY TRALALA");
+        log.debug("This is a debug message");
+        log.info("This is an info message");
+        log.warn("This is a warn message");
+        log.error("This is an error message");
+        log.fatal("This is a fatal message");
         System.out.println("\nHello Siddharth\n");
         log.debug( "main end");
     }
