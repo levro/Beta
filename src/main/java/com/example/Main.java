@@ -8,7 +8,9 @@ import java.lang.*;
 public class Main {
     final static Logger log = LogManager.getLogger( Main.class);
     public static void main(String[] args) {
-        log.debug( "main start");
+        log.debug( "==================MAIN.START==================");
+        log.trace("0000000000000000000000000");
+        log.trace("This is a trace message");
         log.debug("This is a debug message");
         log.info("This is an info message");
         log.warn("This is a warn message");
