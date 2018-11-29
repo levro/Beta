@@ -3,12 +3,12 @@ package com.example;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.lang.*;
+import static com.example.Utils.*;
 
 public class Main {
     static final Level epicFail = Level.forName("EPIC.FAIL!", 50);
     final static Logger log = LogManager.getLogger( Main.class);
+
     public static void main(String[] args) {
         log.debug( "==================MAIN.START==================");
         log.trace("0000000000000000000000000");
@@ -21,5 +21,7 @@ public class Main {
         log.log(epicFail, "This is a epicFail message");
         System.out.println("\nHello Siddharth\n");
         log.debug( "main end");
+        String sum = sumOfTwoStrings( "120", "53");
+        System.out.println( sum );
     }
 }
