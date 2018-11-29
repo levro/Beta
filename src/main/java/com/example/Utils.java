@@ -5,9 +5,9 @@ import org.apache.logging.log4j.Logger;
 
 public class Utils {
 
-    final static Logger log = LogManager.getLogger( Main.class);
+    private final static Logger log = LogManager.getLogger( Utils.class);
 
-    public static String sumOfTwoStrings (String str1, String str2) {
+    static String sumOfTwoStrings (String str1, String str2) {
 
         long a;
         long b;
@@ -20,7 +20,6 @@ public class Utils {
             log.error( "This is not number" );
             return "0";
         }
-        return String.valueOf( a + b);
-
+        return String.valueOf( a + b );
     }
 }
